@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Smart Wizard</title>
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="dist/css/smart_wizard_all.css">
+    <link rel="stylesheet" href="dropzone/dropzone.css">
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+    <form style="margin: 50px 100px;">
+
+        <div id="smartwizard">
+            <ul class="nav">
+               <li>
+                   <a class="nav-link" href="#step-1">
+                    <p class="lead">Bilgilerinizi Giriniz</p>
+                   </a>
+               </li>
+               <li>
+                   <a class="nav-link" href="#step-2">
+                    <p class="lead">
+                     Fotoğrafınızı Yükleyiniz
+                    </p>
+                    
+                </a>
+               </li>
+               <li>
+                   <a class="nav-link" href="#step-3">
+                        <p class="lead">CV Yükleyiniz</p>
+                   </a>
+               </li>
+               <li>
+                   <a class="nav-link" href="#step-4">
+                        <p class="lead">
+                          Gönderimi Onaylayın
+                        </p>
+                    </a>
+               </li>
+            </ul>
+         
+            <div class="tab-content">
+               <div id="step-1" class="tab-pane" role="tabpanel">
+                    <!-- Kullanıcı Bilgileri Alanı -->
+                    <div class="row">
+                        <div class="col-12 kadPanel">
+                            <br>
+                            <input type="text" required class="form-control w-75 m-auto" placeholder="Adınız" id="Ad">
+                            <br>
+                            <input type="text" required class="form-control w-75 m-auto" disabled placeholder="Soyadınız" id="Soyad">
+                            <br>
+                            <input type="text" required class="form-control w-75 m-auto" disabled placeholder="E-Mail Adresiniz" id="mailAdress">
+                            <br>
+                            <input type="date" required class="form-control w-75 m-auto" disabled placeholder="Doğum Tarihiniz" id="dogumTarih">
+                        </div>
+                    </div>                 
+               </div>
+               <div id="step-2" class="tab-pane" role="tabpanel">
+                <br><br><br><br><br><br><br><br><br><br>
+               </div>
+               <div id="step-3" class="tab-pane" role="tabpanel">
+                <br><br><br><br><br><br><br><br><br><br>
+                  
+               </div>
+               <div id="step-4" class="tab-pane" role="tabpanel">
+                  
+                <!-- Post Et -->
+                <div class="text-center">
+                    <button class="btn btn-success btn-lg mt-5 mb-5">Verileri Gönder</button>
+
+                </div>
+
+            </div>
+            </div>
+
+
+            <div class="text-center mb-3 position-absolute w-100">
+
+                <a href="#step-2" class="btn btn-secondary disabled" id="nextHref">Sonraki Adım</a>
+
+            </div>
+            
+        </div>
+
+    </form>
+    
+
+    <form action="/file-upload" class="dropzone frm2 d-none" id="mydropzone">
+        
+    </form>
+    <br><br><br><br>
+
+
+    <form action="/file-upload" class="dropzone frm3 d-none" id="my_dropzone">
+        
+    </form>
+    
+
+
+    <script src="bootstrap/js/jquery-3.5.1.min.js"></script>
+    <script src="bootstrap/js/popper.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="dist/js/jquery.smartWizard.min.js"></script>
+    <script src="dropzone/dropzone.js"></script>
+    <script src="app.js"></script>
+    <script src="mydropzonejs.js"></script>
+<script src="dropzoneform.js"></script>
+</body>
+</html>
